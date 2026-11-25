@@ -1,0 +1,72 @@
+{
+  "expo": {
+    "name": "Mantenimiento Escolar",
+    "slug": "mantenimiento-escolar",
+    "description": "App para registrar y dar seguimiento a reportes de mantenimiento escolar.",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "mantenimientoescolar",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "mx.edu.utvt.mantenimientoescolar",
+      "buildNumber": "1",
+      "supportsTablet": false
+    },
+    "android": {
+      "package": "mx.edu.utvt.mantenimientoescolar",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#0B6E5A",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_BACKGROUND_LOCATION",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.VIBRATE"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0B6E5A",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 120
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Mantenimiento Escolar usa la cámara para tomar fotografías del desperfecto que reportas.",
+          "photosPermission": "Mantenimiento Escolar accede a tus fotos solo para adjuntar la imagen que elijas al reporte.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Mantenimiento Escolar usa tu ubicación para registrar dónde se encuentra el desperfecto reportado."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
